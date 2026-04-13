@@ -171,6 +171,10 @@ def fetch_10min_obs() -> pd.DataFrame:
         st.error(f"Error fetching 10-min observations: {e}")
         return pd.DataFrame()
 
+    # Show raw response for debugging
+    with st.expander("🔍 10-min obs raw API response (debug)", expanded=False):
+        st.json(data)
+
     # Parse CoverageJSON
     try:
         times_raw = data["domain"]["axes"]["t"]["values"]
@@ -181,8 +185,8 @@ def fetch_10min_obs() -> pd.DataFrame:
         return df
     except Exception as e:
         st.error(f"Error parsing 10-min obs response: {e}")
+        st.json(data)  # show raw response so we can see what came back
         return pd.DataFrame()
-
 
 # ── UI ─────────────────────────────────────────────────────────────────────────
 
