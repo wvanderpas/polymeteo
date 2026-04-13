@@ -15,7 +15,7 @@ import requests
 import streamlit as st
 
 # ── Config ────────────────────────────────────────────────────────────────────
-KNMI_API_KEY = os.environ.get("KNMI_API_KEY", "eyJvcmciOiI1ZTU1NGUxOTI3NGE5NjAwMDEyYTNlYjEiLCJpZCI6ImQ2NDI4ZjRlZGE5YzQ1NTA5ZjJmMmIyZjkxNmM1MzdjIiwiaCI6Im11cm11cjEyOCJ9")
+KNMI_API_KEY = "eyJvcmciOiI1ZTU1NGUxOTI3NGE5NjAwMDEyYTNlYjEiLCJpZCI6ImQ2NDI4ZjRlZGE5YzQ1NTA5ZjJmMmIyZjkxNmM1MzdjIiwiaCI6Im11cm11cjEyOCJ9"
 BASE_URL = "https://api.dataplatform.knmi.nl/open-data/v1"
 EDR_BASE = "https://api.dataplatform.knmi.nl/edr/v1"
 
